@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DE-VE-DE Movie Database</title>
+</head>
+<body>
+  <h1>DE-VE-DE Movie Database</h1>
+
+  <div>
+    <h2>Add Movie</h2>
+    <label for="title">Title:</label>
+    <input type="text" id="title" placeholder="Enter title">
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" placeholder="Enter genre">
+    <label for="releaseDate">Release Date:</label>
+    <input type="text" id="releaseDate" placeholder="Enter release date">
+    <button onclick="addMovie()">Add Movie</button>
+  </div>
+
+  <div>
+    <h2>Movies</h2>
+    <ul id="movieList"></ul>
+  </div>
+
+  <div>
+    <h2>Search Movie</h2>
+    <label for="searchTitle">Search by Title:</label>
+    <input type="text" id="searchTitle" placeholder="Enter title to search">
+    <button onclick="searchMovie()">Search</button>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA16tGcDBFZ9uyYBQYxYpTE1MGRkZGGrRM",
+      authDomain: "my-awesome-poject-42867.firebaseapp.com",
+      projectId: "my-awesome-poject-42867",
+      storageBucket: "my-awesome-poject-42867.appspot.com",
+      messagingSenderId: "683085419860",
+      appId: "1:683085419860:web:90510de8b0a81ac13624c1",
+      measurementId: "G-0V55YHRD23"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
